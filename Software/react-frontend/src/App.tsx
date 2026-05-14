@@ -13,7 +13,7 @@ import {
 } from './api/api';
 import type { LedColor } from './types';
 
-// ── Constants ────────────────────────────────────────────────────────────────
+// ---------CONSTANTS----------- //
 
 const LED_COLORS: LedColor[] = [
   { name: 'Green',  hex: '#39ff14' },
@@ -39,7 +39,7 @@ const QUICK_MESSAGES: string[] = [
 const STEPPER_PRESETS = [-90, -45, 0, 45, 90] as const;
 type MotorStatus = 'IDLE' | 'RUNNING SEQUENCE…' | 'SEQUENCE COMPLETE' | 'RESETTING…' | 'HOME POSITION' | 'ERROR — CHECK CONNECTION' | 'ERROR';
 
-// ── Sub-components ───────────────────────────────────────────────────────────
+//  -------------------Sub Components------------------------
 
 interface DividerProps { label: string }
 function Divider({ label }: DividerProps) {
@@ -68,7 +68,7 @@ function Section({ title, children, className = '' }: SectionProps) {
   );
 }
 
-// ── App ──────────────────────────────────────────────────────────────────────
+//  ---------------------------App--------------------------------------- 
 
 export default function App() {
   const { toasts, push } = useToast();
@@ -88,7 +88,7 @@ export default function App() {
   const [stepperDeg,  setStepperDeg]  = useState(45);
   const [motorStatus, setMotorStatus] = useState<MotorStatus>('IDLE');
 
-  // ── Handlers ───────────────────────────────────────────────────────────────
+  //  Handlers
 
   async function handleSendText() {
     if (!text.trim()) { push('Enter some text first!', 'err'); return; }
