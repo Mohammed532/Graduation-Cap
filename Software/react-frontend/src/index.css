@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui/index.js";
 
 
-@plugin "daisyui/theme" {
+@plugin "daisyui/theme/index.js" {
   name: "bison";
   default: true;
   prefersdark: false;
