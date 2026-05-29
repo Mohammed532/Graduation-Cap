@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import MatrixPreview from './components/MatrixPreview';
 import StatusBar from './components/StatusBar';
 import { ToastContainer, useToast } from './components/Toast';

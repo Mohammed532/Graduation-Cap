@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import preact from '@preact/preset-vite'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
+  plugins: [tailwindcss(), preact()],
   base: '/',
   build: {
     outDir: 'dist',
@@ -15,5 +15,6 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash:8].js',
       },
     },
+    sourcemap: false, // disables source map to fix 404 error from ESP32 (content.css.map and sidebar.css.map not found)
   },
 })

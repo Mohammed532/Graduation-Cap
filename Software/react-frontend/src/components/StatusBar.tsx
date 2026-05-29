@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
 import { getStatus } from '../api/api';
 import type { Esp32Status } from '../types';
 

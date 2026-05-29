@@ -12,6 +12,7 @@
 
 #include "wifi_manager.h"
 #include "filesystem_manager.h"
+#include "web_server.h"
 
 extern "C" void app_main() {
     printf("Hello world!\n");
@@ -34,4 +35,7 @@ extern "C" void app_main() {
 
     //Filesystem initialization
     init_filesystem();
+
+    // start webserver
+    start_web_server();
 }

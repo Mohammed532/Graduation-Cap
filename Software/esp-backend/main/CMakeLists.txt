@@ -3,7 +3,7 @@ idf_component_register(
         "src/main.cpp"
         "src/wifi_manager.cpp"
         "src/filesystem_manager.cpp"
-        # "src/web_server.cpp"
+        "src/web_server.cpp"
         # "src/matrix_controller.cpp"
         # "src/motor_controller.cpp"
 
@@ -12,8 +12,8 @@ idf_component_register(
 )
 
 # Point LittleFS image gen at react build folder
-# littlefs_create_partition_image(
-#     littlefs
-#     ../../react-frontend/dist
-#     FLASH_IN_PROJECTS
-# )
+littlefs_create_partition_image(
+    littlefs
+    ../../react-frontend/dist
+    FLASH_IN_PROJECT
+)
